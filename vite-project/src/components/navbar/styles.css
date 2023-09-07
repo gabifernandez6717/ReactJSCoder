@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.navbar{
+    height: 100px;
+    width: auto;
+    padding: 5px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(171, 176, 240);
+}
+
+.logo .img{
+    height: 50px;
+    width: auto;
+}
+
+.items{
+    height: auto;
+    width: auto;
+}
+
+
+
+
+
+.contenedorCarrito{
+    border: 1px solid black;
+}
+.contador{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    height: 50px;
+    width: auto;
+}
+
+
+
+
+
+
+/* .navbar{
+    width: 100%;
+    height: 60px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px, 25px;
+    .h1{
+        font-size: 1em;
+        line-height: 1.1;
+    } 
+}*/
