@@ -1,7 +1,7 @@
 const Logo =()=>{
     return(
         <div className='logo'>
-            <img src="../../../public/imgs/logoApple.jpg" alt="" className='img'/>
+            <a href="/" ><img src="../../../public/imgs/logoApple.jpg" alt="" className='img'/></a>
         </div>
     )
 }

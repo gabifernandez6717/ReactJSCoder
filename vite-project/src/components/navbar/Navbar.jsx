@@ -1,7 +1,7 @@
 import './styles.css'
-import ItemListContainer from './ItemlistContainer'
+import ItemListContainer from '../ItemListContainer/ItemlistContainer'
 import Logo from './logo'
-import CartWidget from './CartWidget'
+import CartWidget from '../cartWidget/CartWidget'
 CartWidget
 const Navbar = ()=>{
     return(

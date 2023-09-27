@@ -5,8 +5,8 @@ const [count, setCount]= useState(0)
 const handCount=()=> setCount(count+ 1)
     return(
         <div>
-            {count}
             <hr />
+            <p>contador: {count}</p>
             <button onClick={handCount}>sumar</button>
         </div>
     )
