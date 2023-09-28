@@ -1,10 +1,6 @@
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import Home from '../pages/home'
-import Celulares from '../pages/categorias/Celulares'
-import Computadoras from '../pages/categorias/Computadoras'
-import Televisores from '../pages/categorias/Televisores'
-import Tablets from '../pages/categorias/Tablets'
-import DetalleProducto from '../pages/DetalleProducto'
+//barrel
+import { Home, DetalleProducto, Celulares, Tablets, Computadoras, Televisores} from '../pages'
 
 const Navigation=()=>{
 
