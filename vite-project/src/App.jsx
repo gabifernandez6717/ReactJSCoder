@@ -3,6 +3,8 @@ import './App.css'
 import Navbar from './components/navbar/Navbar'
 import Navigation from './routes/Navigation'
 import Cargando from './pages/cargando/paginaCargando'
+import Input from './components/input/Input'
+import ItemList from './components/ItemList/ItemList'
 
 function App() {
 
@@ -14,13 +16,19 @@ function App() {
     }, 1000);
   }, []);
 
+  const handleInput=(e)=>{
+    console.log(e)
+  }
   return (
     <div>
         <Navbar/>
         {cargando?(
           <><Cargando/></>
         ):(
+        <><ItemList>
           <Navigation/>
+        </ItemList>
+        </>
         )}
     </div>
   )

@@ -8,7 +8,9 @@ const useCounter = (initialValue = 0) => {
   };
 
   const decrement = () => {
-    setCount(count - 1);
+    if(count>0)
+    setCount(count-1);
+    else count
   };
 
   const reset = () => {

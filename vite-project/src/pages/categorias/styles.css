@@ -1,0 +1,7 @@
+div{
+    padding:"10px";
+    display:flex;
+    justify-content:space-between;
+    align-Items:center;
+    flex-wrap:wrap;
+}
