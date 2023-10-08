@@ -5,7 +5,7 @@ const Home =()=>{
         <>
         {productos.map((producto)=>{
             return(
-                <div style={
+                <div key={producto.id} style={
                     {
                         margin:"5px"
                     }

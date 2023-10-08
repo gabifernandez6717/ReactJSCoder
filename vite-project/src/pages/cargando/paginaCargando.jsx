@@ -1,7 +1,7 @@
 const Cargando=()=>{
     return(
         <>
-        Cargando..., Por favor espere
+        <h2>Cargando..., Por favor espere</h2>
         </>
     )
 }

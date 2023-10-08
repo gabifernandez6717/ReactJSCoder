@@ -1,6 +1,6 @@
 import './styles.css'
 import ItemListContainer from '../ItemListContainer/ItemlistContainer'
-import Logo from './logo'
+import Logo from './Logo'
 import CartWidget from '../cartWidget/CartWidget'
 CartWidget
 const Navbar = ()=>{

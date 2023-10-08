@@ -1,0 +1,25 @@
+.contenedorProductos{
+    padding:"10px";
+    display:flex;
+    justify-content:space-between;
+    align-Items:center;
+    flex-wrap:wrap;
+}
+.contenido{
+    border: 3px solid black;
+    margin: 5px;
+}
+.aniadirAlCarrito{
+    font-size:  30px;
+    color: white;
+    padding: 5px;
+    margin: 15px;
+    background-color: blue;
+}
+.link{
+    font-size: 30px;
+    background-color: blue;
+    color: white;
+    padding: 8px;
+    margin: 10px;
+}
