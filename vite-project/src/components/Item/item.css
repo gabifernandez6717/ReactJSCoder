@@ -1,0 +1,38 @@
+.item{
+    width: 25%;
+    height: auto;
+    margin: 10px;
+    border: 2px solid black;
+    background-color: white;
+    box-shadow: 10px 10px 20px;
+}
+.img{
+    border-radius: 20px;
+    height: 200px;
+    width: auto;
+}
+.nombre{
+    font-size: 40px;
+    margin: 10px;
+}
+.descripcion{
+    font-size: 25px;
+    margin: 10px;
+}
+.precio{
+    font-size: 40px;
+    
+
+}
+.stock{
+    font-size: 30px;
+}
+.Link{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    background-color: blue;
+    border: 2px solid black;
+
+
+}

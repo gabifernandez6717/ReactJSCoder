@@ -1,0 +1,15 @@
+.container{
+    background: rgb(0,82,255);
+background: linear-gradient(180deg, rgba(0,82,255,1) 28%, rgba(3,3,75,1) 100%);
+}
+.nombreEcomerce{
+    height: 100px;
+    margin-left: 44%;
+    margin-right: 50%;
+    display: flex;
+    align-items: center;
+}
+h1{
+    font-size: 70px;
+    color: white;
+}

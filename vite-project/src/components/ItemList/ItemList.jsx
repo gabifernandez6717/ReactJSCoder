@@ -1,16 +1,11 @@
-const ItemList =({children})=>{
+import Item from "../Item/Item"
+import './itemList.css'
+const ItemList =({productos})=>{
     return(
-        <div style={{
-                width: '100%',
-                height: '100%',
-                padding:"10px",
-                display:"flex",
-                justifyContent:"space-between",
-                alignItems:"center",
-                flexWrap:"wrap",
-                border: "3px solid black"
-            }}>
-            {children}
+        <div className="container">
+            {productos.map((producto)=>{
+                return<Item key={producto.id}{...producto}/>
+            })}
         </div>
     )
 }

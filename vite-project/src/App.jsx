@@ -1,36 +1,26 @@
-
-import { useEffect, useState } from 'react'
 import './App.css'
 import Navbar from './components/navbar/Navbar'
-import Navigation from './routes/Navigation'
-import Cargando from './pages/cargando/paginaCargando'
-import ItemList from './components/ItemList/ItemList'
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
+import ItemListContainer from './components/ItemListContainer/ItemlistContainer'
+import DetalleProductoContenedor from './components/DetalleProductoContenedor/DetalleProductoContenedor'
+import { CartProvider } from './contexto/ContextoCarrito'
+import Cart from './components/cart/cart'
 
 function App() {
-
-  const [cargando, setCargando]= useState(true)
-
-  useEffect(() => {
-    setTimeout(() => {
-      setCargando(false);
-    }, 1000);
-  }, []);
-
   return (
-
     <div>
-        <Navbar/>
-        {cargando?(
-          <>
-            <Cargando/>
-          </>
-        ):(
-          <>
-          <ItemList>
-            <Navigation/>
-          </ItemList>
-        </>
-        )}
+      <CartProvider>
+        <BrowserRouter>
+          <Navbar/>
+          <Routes>
+            <Route path='/' element={<ItemListContainer greeting={'TechnoStore'}/>} />
+            <Route path='/categoria/:categoria' element={<ItemListContainer greeting={'TechnoStore'}/>}/>
+            <Route path='/item/:itemId'      element={<DetalleProductoContenedor/>}/>
+            <Route path='/cart'      element={<Cart/>}/>
+            <Route path='*'  element={<h1>404 NOT FOUND</h1>}/>
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
     </div>
   )
 }

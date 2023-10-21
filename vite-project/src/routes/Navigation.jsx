@@ -1,6 +1,7 @@
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 //barrel
 import { Home, DetalleProducto, Celulares, Tablets, Computadoras, Televisores} from '../pages'
+import DetalleProductoContenedor from '../components/DetalleProductoContenedor/DetalleProductoContenedor'
 
 const Navigation=()=>{
 
@@ -27,7 +28,7 @@ const Navigation=()=>{
         },
         {
             path: "/detalle/:id",
-            element: <DetalleProducto/>
+            element: <DetalleProductoContenedor/>
         }
     ])
     return(

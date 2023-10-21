@@ -1,0 +1,14 @@
+.cargando{
+    height: 1000PX;
+    width: 800px;
+    margin-left: 38%;
+    margin-right: 35%;
+    margin-top: 100px;
+    display: flex;
+    align-items: initial;
+    justify-content: center;
+}
+.cargando h2 {
+    font-size: 40px;
+    color: white;
+}

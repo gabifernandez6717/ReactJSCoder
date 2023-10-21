@@ -1,0 +1,18 @@
+.detalleProductoContainer{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.imagenDetalle{
+    width: 600px;
+    height: auto;
+}
+.detalleProductoContainer div h1 {
+    font-size: 80px;
+    margin: 15px;
+    color: black;
+}
+.detalleProductoContainer div p{
+    font-size: 30px;
+    margin: 15px;
+}
