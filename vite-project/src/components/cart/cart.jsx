@@ -8,6 +8,7 @@ const Cart=()=>{
             {
                 carrito.length>0?
                 (
+                    console.log(carrito),
                     carrito.map((producto)=>{
                         return<div key={producto.id}>
                                     <h1 style={{color:'black'}}>{producto.nombre}</h1>
