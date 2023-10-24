@@ -1,10 +1,8 @@
-import './App.css'
 import Navbar from './components/navbar/Navbar'
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
-import ItemListContainer from './components/ItemListContainer/ItemlistContainer'
-import DetalleProductoContenedor from './components/DetalleProductoContenedor/DetalleProductoContenedor'
+import { ItemListContainer, DetalleProductoContenedor, Cart } from './pages'
 import { CartProvider } from './contexto/ContextoCarrito'
-import Cart from './components/cart/cart'
+import './App.css'
 
 function App() {
   return (

@@ -45,8 +45,19 @@ export const CartProvider=({children})=>{
         })
         }
 
+    //Limpiar carrito
+    const limpiarCarrito=()=>{
+        setcarrito([])
+    }
+
+    //remover un item
+    const removerItem=(idItem)=>{
+        const remover = carrito.filter((producto)=>producto.id!==idItem)
+        setcarrito(remover)
+    }
+
     return(
-        <ContextoCarrito.Provider value={{ lproductos, setlproductos, carrito, setcarrito, aniadirAlCarrito, actualizarCarritoCantidad}}>
+        <ContextoCarrito.Provider value={{ limpiarCarrito, removerItem,lproductos, setlproductos, carrito, setcarrito, aniadirAlCarrito, actualizarCarritoCantidad}}>
         {children}
     </ContextoCarrito.Provider>
 )
