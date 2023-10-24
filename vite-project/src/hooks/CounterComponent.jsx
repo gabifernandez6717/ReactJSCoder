@@ -4,7 +4,12 @@ import { ContextoCarrito } from "../contexto/ContextoCarrito";
 
 const CounterComponent=(props) =>{
 const { count, increment, decrement, reset } = useCounter(0, props.stock)
-const {nombres, carrito,setcarrito, setproductos, productos, aniadirAlCarrito}=useContext(ContextoCarrito)
+const { actualizarCarritoCantidad } = React.useContext(ContextoCarrito)
+
+// Cuando se cambia la cantidad, actualiza el carrito
+React.useEffect(() => {
+    actualizarCarritoCantidad(props.id, count)
+}, [count, actualizarCarritoCantidad, props.id])
 return (
     <>
         { count > 0 ?(
@@ -17,7 +22,7 @@ return (
             }}>Incrementar</button>
             <button style={{fontSize:"30px", margin:"15px"}} onClick={()=>decrement()}>Decrementar</button>
             <button style={{fontSize:"30px", margin:"15px", backgroundColor:"red", color:"white", padding:"5px"}} onClick={()=>reset()}>Resetear</button>
-            
+
             </div>
             ):(
                 <div style={{fontSize:"30px"}}>

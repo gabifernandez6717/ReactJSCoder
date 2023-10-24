@@ -14,10 +14,10 @@ function App() {
           <Navbar/>
           <Routes>
             <Route path='/' element={<ItemListContainer greeting={'TechnoStore'}/>} />
-            <Route path='/categoria/:categoria' element={<ItemListContainer greeting={'TechnoStore'}/>}/>
-            <Route path='/item/:itemId'      element={<DetalleProductoContenedor/>}/>
-            <Route path='/cart'      element={<Cart/>}/>
-            <Route path='*'  element={<h1>404 NOT FOUND</h1>}/>
+            <Route path='/categoria/:categoria'element={<ItemListContainer greeting={'TechnoStore'}/>}/>
+            <Route path='/item/:itemId'element={<DetalleProductoContenedor/>}/>
+            <Route path='/cart'element={<Cart/>}/>
+            <Route path='*'element={<h1>404 NOT FOUND</h1>}/>
           </Routes>
         </BrowserRouter>
       </CartProvider>

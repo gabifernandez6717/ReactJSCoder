@@ -1,5 +1,4 @@
 import './styles.css'
-import ItemListContainer from '../ItemListContainer/ItemlistContainer'
 import Logo from './Logo'
 import CartWidget from '../cartWidget/CartWidget'
 import { Link, NavLink, Router } from 'react-router-dom'

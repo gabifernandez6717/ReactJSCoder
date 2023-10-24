@@ -1,19 +1,18 @@
 import { useContext } from "react"
 import { ContextoCarrito } from "../../contexto/ContextoCarrito"
-import productos from "../main"
 const Cart=()=>{
     const{carrito}=useContext(ContextoCarrito)
     return (
         <>
             {
-                carrito.length>0?
-                (
-                    console.log(carrito),
+                carrito.length>0
+                ?(
                     carrito.map((producto)=>{
                         return<div key={producto.id}>
                                     <h1 style={{color:'black'}}>{producto.nombre}</h1>
                                     <img src={producto.imagen} alt={producto.nombre} />
-                                    <p style={{color:'red'}}>Precio: ${producto.precio}</p>
+                                    <h3>cantidad: {producto.cantidad}</h3>
+                                    <h2 >Precio: ${producto.precio}</h2>
                                     {console.log([...carrito])}
                                 </div>
                         })

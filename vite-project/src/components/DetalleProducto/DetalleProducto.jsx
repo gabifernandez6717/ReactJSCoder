@@ -1,15 +1,13 @@
 import CounterComponent from '../../hooks/CounterComponent';
 import './detalleProducto.css'
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ContextoCarrito } from '../../contexto/ContextoCarrito';
-import { obtenerProductosId } from '../main'
   import Layout from '../layout/layout';
-  
-  
-  const DetalleProducto = ({imagen,nombre,descripcion,precio,stock, id, cantidad}) => {
-  const{carrito}=useContext(ContextoCarrito)
+
+
+  const DetalleProducto = ({imagen,nombre,descripcion,precio,stock, id}) => {
   const {aniadirAlCarrito}=useContext(ContextoCarrito)
-  
+
     return (
     <Layout>
       <div className='detalleProductoContainer'>
@@ -20,8 +18,8 @@ import { obtenerProductosId } from '../main'
             <p>$ {precio}</p>
             <p>Stock: {stock}</p>
             <div>
-            <CounterComponent id={id} stock={stock} nombre={nombre} imagen={imagen} precio={precio} cantidad={cantidad}/>
-            <button style={{fontSize:"30px", color:"white", padding:"5px", margin:"15px", backgroundColor:"blue", textDecoration:"none"}} to={`/cart`} 
+            <CounterComponent stock={stock} id={id}/>
+            <button style={{fontSize:"30px", color:"white", padding:"5px", margin:"15px", backgroundColor:"blue", textDecoration:"none"}} to={`/cart`}
             onClick={()=> {
               aniadirAlCarrito(id)
             }
