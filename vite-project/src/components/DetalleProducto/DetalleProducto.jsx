@@ -2,7 +2,7 @@ import CounterComponent from '../../hooks/CounterComponent';
 import './detalleProducto.css'
 import { useContext } from "react";
 import { ContextoCarrito } from '../../contexto/ContextoCarrito';
-  import Layout from '../layout/layout';
+import Layout from '../layout/layout';
 
 
   const DetalleProducto = ({imagen,nombre,descripcion,precio,stock, id}) => {
