@@ -1,18 +1,18 @@
-import CounterComponent from '../../hooks/CounterComponent';
+import CounterComponent from '../../hooks/CounterComponent'
+import { useContext } from "react"
+import { ContextoCarrito } from '../../contexto/ContextoCarrito'
 import './detalleProducto.css'
-import { useContext } from "react";
-import { ContextoCarrito } from '../../contexto/ContextoCarrito';
-import Layout from '../layout/layout';
-
+import Layout from '../layout/layout'
 
   const DetalleProducto = ({imagen,nombre,descripcion,precio,stock, id}) => {
-  const {aniadirAlCarrito}=useContext(ContextoCarrito)
+
+    const {aniadirAlCarrito}=useContext(ContextoCarrito)
 
     return (
     <Layout>
       <div className='detalleProductoContainer'>
           <img className='imagenDetalle' src={imagen} alt={nombre}/>
-          <div>
+            <div>
             <h1>{nombre}</h1>
             <p>{descripcion}</p>
             <p>$ {precio}</p>
@@ -22,8 +22,7 @@ import Layout from '../layout/layout';
             <button style={{fontSize:"30px", color:"white", padding:"5px", margin:"15px", backgroundColor:"blue", textDecoration:"none"}} to={`/cart`}
             onClick={()=> {
               aniadirAlCarrito(id)
-            }
-                  }>Añadir al carrito</button>
+            }}>Añadir al carrito</button>
             </div>
           </div>
       </div>

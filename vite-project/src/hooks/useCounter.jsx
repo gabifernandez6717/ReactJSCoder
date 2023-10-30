@@ -1,23 +1,23 @@
-import { useState } from "react";
+import { useState } from "react"
 
 const useCounter = (initialValue = 0) => {
-  const [count, setCount] = useState(initialValue);
+  const [count, setCount] = useState(initialValue)
 
   const increment = () => {
-    setCount(count + 1);
-  };
+    setCount(count + 1)
+  }
 
   const decrement = () => {
     if(count>0 )
-    setCount(count-1);
+    setCount(count-1)
     else setCount(0)
-  };
+  }
 
   const reset = () => {
-    setCount(initialValue);
-  };
+    setCount(initialValue)
+  }
 
-  return { count, increment, decrement, reset };
-};
+  return { count, increment, decrement, reset }
+}
 
-export default useCounter;
+export default useCounter

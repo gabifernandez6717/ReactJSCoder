@@ -1,3 +1,4 @@
+
 const productos = [
   {
     nombre: "Smartphone Galaxy S21",
@@ -199,31 +200,54 @@ const productos = [
     id: 20,
     cantidad: []
   },
-  // Agrega aquí más productos con la propiedad "cantidad" configurada como un array vacío
-];
-
+]
 
 export default productos
+
+
+
+import { db } from "../db/db";
+import { collection, getDocs } from 'firebase/firestore'
+
+const referenciaProductos= collection(db, "productos")
 
 export const obtenerProductosId=(id)=>{
   return new Promise((resolve)=>{
     setTimeout(()=>{
-      resolve(productos.find(producto=>producto.id==id))
+      const referenciaProductos= collection(db, "productos", `${id}`)
+      getDocs(referenciaProductos).then((response)=>{
+          //filtro de data a array de objetos
+          const productosFirebase=response.docs.filter((doc)=>doc.id===id)
+      resolve(productosFirebase)
+        })
+      // resolve(productos.find(producto=>producto.id==id))
     },1000)
   })
 }
 export const obtenerProductosCategoria = (categoria) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const productosCategoria = productos.filter((producto) => producto.categoria === categoria)
-      resolve(productosCategoria)
-    }, 1000)
+
+        //getdoc(S) para obtener todos los productos
+        getDocs(referenciaProductos).then((response)=>{
+            //filtro de data a array de objetos
+            const productosFirebase=response.docs.map((doc)=>doc.categoria===categoria)
+              resolve(productosFirebase)
+          })
+
+    }, 0)
   })
 }
+
 export const obtenerProductos = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(productos)
-    }, 1000)
+      getDocs(referenciaProductos).then((response)=>{
+        //formateo de data a array de objetos
+        const productosFirebase=response.docs.map((product)=>(
+            {id: product.id, ...product.data()}
+        ))
+      resolve(productosFirebase)})
+    }, 2500)
   })
 }

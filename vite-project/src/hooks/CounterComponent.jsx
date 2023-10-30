@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import useCounter from "./useCounter";
 import { ContextoCarrito } from "../contexto/ContextoCarrito";
 
@@ -9,7 +9,7 @@ const { actualizarCarritoCantidad } = React.useContext(ContextoCarrito)
 // Cuando se cambia la cantidad, actualiza el carrito
 React.useEffect(() => {
     actualizarCarritoCantidad(props.id, count)
-}, [count, actualizarCarritoCantidad, props.id])
+}, [count])
 return (
     <>
         { count > 0 ?(
