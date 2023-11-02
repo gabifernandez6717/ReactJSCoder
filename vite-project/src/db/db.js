@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import {getFirestore} from "firebase/firestore"
+import {collection, getFirestore} from "firebase/firestore"
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyC2ObZ5gimcoleZuza8P8-KngoolnsgpvA",
@@ -13,3 +13,5 @@ const firebaseConfig = {
 // Initialize Firebase
 initializeApp(firebaseConfig);
 export const db = getFirestore()
+
+export const orderCollections= collection(db,'orders')
