@@ -1,0 +1,55 @@
+# E-commerce React.js
+
+Este es un proyecto de e-commerce desarrollado en React.js como parte de mi formación en CoderHouse.
+
+## Descripción
+
+Este proyecto se centra en la creación de una tienda en línea que ofrece una variedad de productos en diferentes categorías, como celulares, computadoras, tablets y televisores. Los usuarios pueden explorar los productos, ver detalles específicos de cada producto y agregarlos a su carrito de compras. Además, se incluye un proceso de checkout para finalizar las compras.
+
+## Estructura del Proyecto
+
+El proyecto se compone de varios componentes y módulos que interactúan entre sí. A continuación, se presenta una breve descripción de los archivos y carpetas más importantes:
+
+- `src/index.js`: Punto de entrada de la aplicación React.
+
+- `src/App.js`: Componente principal de la aplicación.
+
+- `src/routes/Navigation.js`: Configuración de las rutas de navegación de la aplicación.
+
+- `src/pages/ItemListContainer.js`: Componente que muestra la lista de productos en función de la categoría seleccionada.
+
+- `src/pages/Item.js`: Componente que representa un producto individual.
+
+- `src/pages/DetalleProducto.js`: Componente que muestra los detalles de un producto específico.
+
+- `src/contexto/ContextoCarrito.js`: Gestión del estado del carrito de compras.
+
+- `src/hooks/CounterComponent.js`: Componente para gestionar la cantidad de productos en el carrito.
+
+## Funcionamiento
+
+El funcionamiento de la aplicación se basa en la navegación a través de las diferentes categorías de productos, la visualización de detalles de productos individuales y la posibilidad de agregar productos al carrito de compras. El carrito se puede revisar en la página de "Cart" y se puede proceder al proceso de checkout en la página "Checkout".
+
+## Tecnologías Utilizadas
+
+- React.js
+- React Router
+- Firebase (para almacenar datos de productos)
+- Estilos CSS
+
+## Instalación
+
+1. Clona este repositorio en tu máquina local.
+2. Abre una terminal y navega hasta la carpeta del proyecto.
+3. Ejecuta el siguiente comando para instalar las dependencias: npm install
+4. Luego, inicia la aplicación con: npm start
+
+
+La aplicación estará disponible en [http://localhost:3000](http://localhost:3000).
+
+
+
+
+
+
+
