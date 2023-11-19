@@ -1,6 +1,7 @@
 import { addDoc } from "firebase/firestore"
 import { orderCollections } from "../../db/db"
 import { useEffect, useState } from "react"
+import ResumenCompra from "../checkoutForm/CheckoutForm"
 const Checkout=()=>{
     const [orderId, setOrderId] = useState(null)
     //orden
@@ -21,9 +22,13 @@ const Checkout=()=>{
         addDocument()
     },[])
     return <>
-    <h1 style={{color:'black'}}>
+    <h2 style={{color:'black'}}>
         El ID de su orden es: {orderId}
-    </h1>
+        <hr />
+    </h2>
+    <div>
+        <ResumenCompra/>
+    </div>
     
     </>
     }

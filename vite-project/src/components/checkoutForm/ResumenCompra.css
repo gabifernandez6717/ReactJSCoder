@@ -1,0 +1,26 @@
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para el contenedor del resumen de compra */
+div {
+    margin: 0 auto;
+}
+h2 {
+    color: #333;
+}
+p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
